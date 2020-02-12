@@ -1,0 +1,6 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<% done = @task.completed ? "[X] The task is done" : "[ ] The task is not done" %>
+<p><%="#{done}"%></p>
+<p><%= link_to "Back to the list", tasks_path %></p>
+<%=  link_to "edit", edit_path(@task)%>
